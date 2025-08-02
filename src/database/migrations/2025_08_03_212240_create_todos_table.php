@@ -14,9 +14,15 @@ class CreateTodosTable extends Migration
     public function up()
     {
         Schema::create('todos', function (Blueprint $table) {
-            $table->id(); // unsigned bigint 主キー
-            $table->text('content'); // Todoの内容
-            $table->timestamps(); // created_at と updated_at
+            $table->id();
+            // 外部キー（カテゴリ削除時に紐づくTodoも削除：仕様に合わせて変更可）
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+
+            //constrained() 外部キー制約による共有
+            //cascadeOnDelete() 
+
+            $table->string('content', 20); // 20文字以内にするなら
+            $table->timestamps();
         });
     }
 

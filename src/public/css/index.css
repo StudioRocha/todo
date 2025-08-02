@@ -27,12 +27,19 @@
 }
 
 /* ========================================
-   Layout
+   Layout 
    ======================================== */
-.todo__content {
+/* .todo__content {
   max-width: 600px;
   margin: 80px auto 0 auto;
   padding: 0 16px;
+} */
+
+/*  レスポンシブに上限を決める場合 */
+.todo__content {
+  width: min(100%, 1100px);   /* ビューポートに合わせつつ上限1100px */
+  margin: 80px auto 0;
+  padding: 0 24px;
 }
 
 /* ========================================
@@ -66,7 +73,7 @@
 
 .create-form__button-submit {
   border-radius: 3px;
-  width: 150%;
+  width: 100%;
   background-color: #000;
   color: #fff;
   padding: 10px 30px;
