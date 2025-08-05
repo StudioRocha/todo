@@ -14,9 +14,16 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">
-                Todo
-            </a>
+            <a class="header__logo" href="/">Todo</a>
+
+            <nav class="header__nav" aria-label="Global">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <!-- カテゴリ一覧ナビ -->
+                        <a class="header__nav-link" href="/categories">カテゴリ一覧</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 

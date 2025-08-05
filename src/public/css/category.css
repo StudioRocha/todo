@@ -26,7 +26,21 @@
   padding-left: 1.2em; 
 }
 
+/* ========================================
+   Layout 
+   ======================================== */
+/* .todo__content {
+  max-width: 600px;
+  margin: 80px auto 0 auto;
+  padding: 0 16px;
+} */
 
+/*  レスポンシブに上限を決める場合 */
+.todo__content {
+  width: min(100%, 1100px);   /* ビューポートに合わせつつ上限1100px */
+  margin: 80px auto 0;
+  padding: 0 24px;
+}
 
 /* ========================================
    Create Form
@@ -53,22 +67,7 @@
   box-sizing: border-box;
 }
 
-.create-form__item-select {
-  width: 80%;
-  padding: 10px ;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  outline: none;
-  box-sizing: border-box;
-  appearance: none; /* OSのデフォルトデザインを抑制（任意） */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-    /* ✅ 少し右にずらす */
-  margin-left: 30px; /* お好みで調整。例: 8px～16px など */
-}
-
-.create-form__item-select:focus {
+.create-form__item-input:focus {
   border-color: #333;
 }
 
@@ -77,11 +76,10 @@
   width: 100%;
   background-color: #000;
   color: #fff;
-  padding: 10px 60px; /* ✅ 横の余白も増やす */
+  padding: 10px 30px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  white-space: nowrap;        /* ✅ 改行を禁止する */
 }
 
 /* ========================================
@@ -104,20 +102,19 @@
 }
 
 .todo-table__item {
-  padding: 12px 21px;
+  padding: 12px 0;
   border-bottom: 1px solid #ccc;
 }
 
 /* ========================================
    Todo Row (1セル内)
    ======================================== */
-   
 .todo-row {
   display: flex;
   align-items: center;
-  justify-content: flex-end;   /* ← 右寄せ */
+  justify-content: space-between;  /* ← 入力とボタンの配置 */
   gap: 12px;
-  width: 100%;                 /* ✅ セル全体を使えるように */
+  width: 100%;
 }
 
 /* ========================================
