@@ -14,5 +14,7 @@ class Category extends Model
     public function todos(): HasMany
     {
         return $this->hasMany(Todo::class);
+
+        //gittest
     }
 }
