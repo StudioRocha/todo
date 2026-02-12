@@ -1,0 +1,197 @@
+/* ========================================
+   Alert
+   ======================================== */
+.todo__alert--success {
+  padding: 10px 30px;
+  background-color: #d1e7dd;
+  /* border: 1px solid #badbcc; */
+  color: #0f5132;
+  font-size: 14px;
+}
+
+/* ========================================
+   AlertError
+   ======================================== */
+.todo__alert--danger {
+  padding: 10px 30px;
+  background-color: #f83535;
+  /* border: 1px solid #badbcc; */
+  color: #0f5132;
+  font-size: 14px;
+}
+
+/* エラーの箇条書きの余白をリセット（“枠が太く見える”の防止） */
+.todo__alert--danger ul {
+  margin: 0;
+  padding-left: 1.2em; 
+}
+
+
+
+/* ========================================
+   Create Form
+   ======================================== */
+.create-form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-form__item {
+  flex-grow: 1;
+}
+
+.create-form__item-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.create-form__item-select {
+  width: 80%;
+  padding: 10px ;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none; /* OSのデフォルトデザインを抑制（任意） */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    /* ✅ 少し右にずらす */
+  margin-left: 30px; /* お好みで調整。例: 8px～16px など */
+}
+
+.create-form__item-select:focus {
+  border-color: #333;
+}
+
+.create-form__button-submit {
+  border-radius: 3px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 60px; /* ✅ 横の余白も増やす */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;        /* ✅ 改行を禁止する */
+}
+
+/* ========================================
+   Table
+   ======================================== */
+.todo-table__inner {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.todo-table__header {
+  text-align: left;
+  padding: 16px 0 8px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-table__row {
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-table__item {
+  padding: 12px 21px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* ========================================
+   Todo Row (1セル内)
+   ======================================== */
+   
+.todo-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* ← 右寄せ */
+  gap: 12px;
+  width: 100%;                 /* ✅ セル全体を使えるように */
+}
+
+/* ========================================
+   Update Form
+   ======================================== */
+.update-form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 12px;
+  flex-grow: 1;
+  width: 100%;
+  
+}
+
+.update-form__item-input {
+  flex-grow: 1;
+  padding: 6px 8px;
+  font-size: 16px;
+  border: none;
+  /* border-bottom: 1px solid #ccc; */
+  background-color: transparent;
+  outline: none;
+  
+}
+
+.update-form__item-input:focus {
+  border-bottom-color: #333;
+}
+
+.update-form__button-submit {
+  background-color: blue;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+   border-radius: 3px;
+}
+
+/* ========================================
+   Delete Form
+   ======================================== */
+.delete-form {
+  margin: 0;
+}
+
+.delete-form__button-submit {
+  background-color: red;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+
+/* ========================================
+   categoty inline Form
+   ======================================== */
+
+.update-form__item-select {
+  width: 100%;
+  padding: 10px ;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none; /* OSのデフォルトデザインを抑制（任意） */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    /* ✅ 少し右にずらす */
+  margin-left: 30px; /* お好みで調整。例: 8px～16px など */
+}

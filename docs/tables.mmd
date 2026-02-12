@@ -1,0 +1,18 @@
+erDiagram
+
+    categories {
+        bigint id "PK"
+        string name "UK カテゴリ名(10文字)"
+        timestamp created_at "作成日時"
+        timestamp updated_at "更新日時"
+    }
+
+    todos {
+        bigint id "PK"
+        bigint category_id "FK → categories.id CASCADE"
+        string content "Todo本文(20文字)"
+        timestamp created_at "作成日時"
+        timestamp updated_at "更新日時"
+    }
+
+    categories ||--o{ todos : "1対多"
